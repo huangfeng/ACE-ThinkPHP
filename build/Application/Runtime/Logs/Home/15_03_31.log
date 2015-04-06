@@ -1,0 +1,159 @@
+[ 2015-03-31T22:41:20+08:00 ] 127.0.0.1 /admin/build/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.089160s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.056310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.056430s ]
+
+[ 2015-03-31T22:41:21+08:00 ] 127.0.0.1 /admin/build/index.php/Home/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.438228s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.438381s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.016997s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017132s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005089s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005325s ]
+
+[ 2015-03-31T22:41:22+08:00 ] 127.0.0.1 /admin/build/index.php/Home/Index/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.037385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002404s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002609s ]
+
+[ 2015-03-31T22:41:25+08:00 ] 127.0.0.1 /admin/build/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000984s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001166s ]
+NOTIC: [8] Undefined index: _nav E:\www\admin\build\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 2013 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.434894s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.434990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001417s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001538s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002946s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003320s ]
+
+[ 2015-03-31T22:42:30+08:00 ] 127.0.0.1 /admin/build/index.php/Home/Index/calendar.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.011381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001410s ]
+ERR: 非法操作:calendar
+
+[ 2015-03-31T22:42:52+08:00 ] 127.0.0.1 /admin/build/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.012884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001785s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000638s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000759s ]
+NOTIC: [8] Undefined index: _nav E:\www\admin\build\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 2013 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078933s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079019s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000984s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003649s ]
+
+[ 2015-03-31T22:44:18+08:00 ] 127.0.0.1 /admin/build/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001347s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001701s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] Undefined index: _nav E:\www\admin\build\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 2013 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.183815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.183885s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000566s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\www\admin\build\ThinkPHP\Common\functions.php:850) E:\www\admin\build\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\www\admin\build\ThinkPHP\Common\functions.php:850) E:\www\admin\build\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\www\admin\build\ThinkPHP\Common\functions.php:850) E:\www\admin\build\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002310s ]
+
+[ 2015-03-31T22:44:53+08:00 ] 127.0.0.1 /admin/build/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000278s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+NOTIC: [8] Undefined index: _nav E:\www\admin\build\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 2013 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036615s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000582s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\www\admin\build\ThinkPHP\Common\functions.php:850) E:\www\admin\build\ThinkPHP\Library\Think\View.class.php 第 91 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\www\admin\build\ThinkPHP\Common\functions.php:850) E:\www\admin\build\ThinkPHP\Library\Think\View.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at E:\www\admin\build\ThinkPHP\Common\functions.php:850) E:\www\admin\build\ThinkPHP\Library\Think\View.class.php 第 93 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005556s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005973s ]
+
+[ 2015-03-31T22:48:02+08:00 ] 127.0.0.1 /admin/build/index.php/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001184s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001267s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000482s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000561s ]
+NOTIC: [8] Undefined index: _nav E:\www\admin\build\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 2013 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046975s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002121s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002300s ]
+
