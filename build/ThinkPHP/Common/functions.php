@@ -1122,44 +1122,6 @@ function S($name,$value='',$options=null) {
  * @param string $path 缓存路径
  * @return mixed
  */
-function F($path, $name, $value='') {
-    static $_cache  =   array();
-    //自定义缓存路径
-    $path = $path == '' ? DATA_PATH : $path;
-    $filename       =   $path . $name . '.php';
-    if ('' !== $value) {
-        if (is_null($value)) {
-            // 删除缓存
-            if(false !== strpos($name,'*')){
-                return false; // TODO 
-            }else{
-                unset($_cache[$name]);
-                return Think\Storage::unlink($filename,'F');
-            }
-        } else {
-            Think\Storage::put($filename,serialize($value),'F');
-            // 缓存数据
-            $_cache[$name]  =   $value;
-            return null;
-        }
-    }
-    // 获取缓存数据
-    if (isset($_cache[$name]))
-        return $_cache[$name];
-    if (Think\Storage::has($filename,'F')){
-        $value      =   unserialize(Think\Storage::read($filename,'F'));
-        $_cache[$name]  =   $value;
-    } else {
-        $value          =   false;
-    }
-    return $value;
-}
-
-
-/*
- * ThinkPHP
- */
-/*
 function F($name, $value='', $path=DATA_PATH) {
     static $_cache  =   array();
     $filename       =   $path . $name . '.php';
@@ -1189,7 +1151,7 @@ function F($name, $value='', $path=DATA_PATH) {
         $value          =   false;
     }
     return $value;
-}*/
+}
 
 /**
  * 根据PHP各种类型变量生成唯一标识号

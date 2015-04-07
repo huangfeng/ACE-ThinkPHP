@@ -22,6 +22,8 @@ class IndexController extends BaseController {
     }
 
     public function verify(){
+        //清空缓冲区
+        ob_end_clean();
     	$Verify = new \Think\Verify(array(
     		'length' => 4, 
     		'useCurve' => false));
@@ -46,5 +48,8 @@ class IndexController extends BaseController {
         }
     }
 
-    
+    public function logout(){
+        session('isLogin', null);
+        $this->display('Index/login');
+    }
 }
