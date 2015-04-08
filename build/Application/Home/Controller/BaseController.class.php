@@ -2,7 +2,10 @@
 namespace Home\Controller;
 use Think\Controller;
 class BaseController extends Controller {
-	public function _initialize(){
+	/**
+	 * 初始化
+	 */
+	protected function _initialize(){
         //导航
 		$arrNav = F('nav.config','',CONF_PATH);
 		if(!$arrNav){
@@ -150,4 +153,48 @@ class BaseController extends Controller {
 		$this->assign('_nav', $arrNav);
 	}
 
+	/**
+	 * 通用分页列表
+	 * @param  model $model 数据模型
+	 * @param  array $map 	查询条件
+	 * @param  array $field 查询字段
+	 * @author Buff
+	 * @2015.4.8
+	 */
+	protected function _list($model, $map=array(), $field=array()){
+		$pageIndex = I('request.' . C('VAR_PAGE'), 1, 'int');
+		$pageRows = I('request._r', C('VAR_ROWS'), 'int');
+		$order = I('request._o', false, 'string');
+		$sort = I('request._s', false, 'string');
+
+
+		if(strtolower($sort) !== 'asc'){
+			$sort = 'desc';
+		}
+		if(!in_array(strtolower($order), $model->getDbFields())){
+			$order = $model->getPk();
+		}
+
+		$count = $model->where($map)->count();
+		$list = $model->where($map)->page($pageIndex, $pageRows)->order($order . ' ' . $sort)->select();
+
+		$Page = new \Think\Page($count, $pageRows);
+		//加入查询条件
+		foreach($map as $key=>$val) {
+			if(!is_array($val)){
+				$Page->parameter[$key] = urlencode($val);
+			}
+		}
+
+		$pageHtml = $Page->show();
+
+		$_list = array(
+			'list' 	=> $list, 
+			'page' 	=> $pageHtml,
+			'count' => $count,
+			'rows'	=> $pageRows,
+			'rowsOptions'	=> C('ROWS_OPTIONS'));
+
+		$this->assign('_list', $_list);
+	}
 }

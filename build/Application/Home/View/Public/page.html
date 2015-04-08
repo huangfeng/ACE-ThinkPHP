@@ -1,0 +1,35 @@
+<div class="pull-left" id="dynamic-table_length">
+	<label> 
+		<select name="_r" aria-controls="dynamic-table" class="form-control input-sm">
+			<foreach name="_list.rowsOptions" item="vo">
+				<option value="{$vo}" <eq name="vo" value="$_list.rows">selected</eq>>{$vo}</option>
+			</foreach>
+		</select>
+	</label>
+</div>
+{$_list.page}
+<ul class="pagination pull-right no-margin">
+	<li class="prev disabled">
+		<a href="#">
+			<i class="ace-icon fa fa-angle-double-left"></i>
+		</a>
+	</li>
+
+	<li class="active">
+		<a href="#">1</a>
+	</li>
+
+	<li>
+		<a href="#">2</a>
+	</li>
+
+	<li>
+		<a href="#">3</a>
+	</li>
+
+	<li class="next">
+		<a href="#">
+			<i class="ace-icon fa fa-angle-double-right"></i>
+		</a>
+	</li>
+</ul>
