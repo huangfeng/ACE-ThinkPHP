@@ -143,6 +143,26 @@ class BaseController extends Controller {
 							),
 						),
 					),
+				array(
+					'id'	=> 21,
+					'title'	=> 'User',
+					'url'	=> '',
+					'icon'	=> 'fa-users',
+					'children'	=> array(
+						array(
+							'id'	=> 22,
+							'title'	=> 'User List',
+							'url'	=> 'User/index',
+							'icon'	=> 'fa-list',
+							),
+						array(
+							'id'	=> 23,
+							'title'	=> 'Add User',
+							'url'	=> 'User/add',
+							'icon'	=> 'fa-plus',
+							),
+						),
+					),
 				);
 			
 			//开发时 注释掉
@@ -155,30 +175,36 @@ class BaseController extends Controller {
 
 	/**
 	 * 通用分页列表
-	 * @param  model $model 数据模型
-	 * @param  array $map 	查询条件
-	 * @param  array $field 查询字段
+	 * @param  model $model  数据模型
+	 * @param  array $map 	 查询条件
+	 * @param  array $fields 查询字段
 	 * @author Buff
 	 * @2015.4.8
 	 */
-	protected function _list($model, $map=array(), $field=array()){
+	protected function _list($model, $map=array(), $fields=array()){
 		$pageIndex = I('request.' . C('VAR_PAGE'), 1, 'int');
 		$pageRows = I('request._r', C('VAR_ROWS'), 'int');
 		$order = I('request._o', false, 'string');
 		$sort = I('request._s', false, 'string');
 
-
+		//排序 默认降序
 		if(strtolower($sort) !== 'asc'){
 			$sort = 'desc';
 		}
+		//排序 默认根据主键
 		if(!in_array(strtolower($order), $model->getDbFields())){
 			$order = $model->getPk();
 		}
+		//默认查询所有字段
+		if(empty($fields)){
+			$fields = $model->getDbFields();
+		}
 
+		//
 		$count = $model->where($map)->count();
-		$list = $model->where($map)->page($pageIndex, $pageRows)->order($order . ' ' . $sort)->select();
+		$list = $model->where($map)->page($pageIndex, $pageRows)->order($order . ' ' . $sort)->field($fields)->select();
 
-		$Page = new \Think\Page($count, $pageRows);
+		$Page = new \Common\Ext\PageExt($count, $pageRows);
 		//加入查询条件
 		foreach($map as $key=>$val) {
 			if(!is_array($val)){

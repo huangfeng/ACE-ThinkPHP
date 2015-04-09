@@ -7,7 +7,9 @@ return array(
 
 	/* 分页配置 */
 	'VAR_PAGE'			=> '_p',	//分页参数名称
-	'VAR_ROWS'			=> 20,		//分页默认条数
+	'VAR_ROWS'			=> 2,		//分页默认条数
 	'ROWS_OPTIONS'		=> array(10, 20, 30, 50, 100),		//分页条数下拉框
+
+
 
 );
