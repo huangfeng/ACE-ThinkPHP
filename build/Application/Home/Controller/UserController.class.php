@@ -103,5 +103,28 @@ class UserController extends BaseController {
         $this->display();
     }
 
+    public function add(){
+        if(IS_POST){
+
+        }else{
+            $this->display();
+        }
+    }
+
+    public function edit(){
+        if(IS_POST){
+
+        }else{
+            $this->display();
+        }
+    }
+
+    public function view(){
+        $this->display();
+    }
+
+    public function delete(){
+
+    }
 
 }
