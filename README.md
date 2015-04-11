@@ -11,8 +11,15 @@ ACE后台模板和ThinkPHP框架的简单整合
 
 ## 改动
 
+ACE
+
 1. 固定navbar、sidebar、breadcrumbs，使用compact sidebar
 2. 上方navbar导航中dropdown效果改click为hover 
+
+ThinkPHP
+
+1. 绑定Home模块，URL模式为3兼容模式
+2. 更改Page分页样式
 
 ACE 
 > Twitter bootstrap 3 admin template  see example http://ace.jeka.by/

@@ -20,7 +20,7 @@ function get_sidebar($arrNav){
 		}
 
 		//子节点处理
-		if(is_array($v['children'])){
+		if(!empty($v['children']) && is_array($v['children'])){
 			$html .= '<a href="' 
 			. get_nav_url($v['url']) 
 			. '" class="dropdown-toggle"><i class="menu-icon fa ' 
