@@ -50,20 +50,34 @@ function get_sidebar($arrNav){
  * @return string      解析后的url
  * @2015.4.5
  */
+// function get_nav_url($url){
+// 	switch ($url) {
+// 		case 'http://' === strtolower(substr($url, 0, 7)):
+// 			break;
+// 		case '#' === substr($url, 0, 1):
+// 		case '':
+// 			$url = 'javascript:void(0);';
+// 			dump($url);
+// 			break;     
+// 		default:
+// 			$url = U($url);
+// 			break;
+// 	}
+// 	return $url;
+// }
+
 function get_nav_url($url){
-	switch ($url) {
-		case 'http://' === strtolower(substr($url, 0, 7)):
-			break;
-		case '#' === substr($url, 0, 1):
-		case '':
-			$url = 'javascript:void(0);';
-			break;     
-		default:
-			$url = U($url);
-			break;
+	if($url === '' || $url === '#'){
+		$url = 'javascript:void(0);';
+	}elseif(strtolower(substr($url, 0, 7)) === 'http://'){
+
+	}else{
+		$url = U($url);
 	}
+
 	return $url;
 }
+
 
 /**
  * 获取当前（active）导航树节点ID
@@ -73,9 +87,9 @@ function get_nav_url($url){
  * @author Buff
  * @2015.4.7
  */
-function get_active_nav($arrNav, $arrId = ''){
+function get_active_nav($arrNav, $arrId = array()){
 	//已知子节点 遍历递归获取父节点
-	if($arrId !== ''){
+	if(!empty($arrId)){
 		foreach ($arrNav as $k => $v) {
 			if(in_array($v['id'], $arrId)){
 				return true;
@@ -96,10 +110,8 @@ function get_active_nav($arrNav, $arrId = ''){
 
 			if(is_array($v['children'])){
 				$arrId = get_active_nav($v['children']);
-				if(is_array($arrId)){
-					$arrId[] = $v['id'];
-					return $arrId;
-				}
+				$arrId[] = $v['id'];
+				return $arrId;
 			}
 		}
 	}

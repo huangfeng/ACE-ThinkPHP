@@ -152,7 +152,7 @@ class BaseController extends Controller {
 				array(
 					'id'	=> 21,
 					'title'	=> 'User',
-					'url'	=> '',
+					'url'	=> 'User/index',
 					'icon'	=> 'fa-users',
 					'children'	=> array(
 						array(
