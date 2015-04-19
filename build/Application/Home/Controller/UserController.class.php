@@ -73,7 +73,8 @@ class UserController extends BaseController {
 
     public function index(){
     	
-        $this->_info['title'] = '用户管理';
+        $_info = array();
+        $_info['title'] = '用户管理';
         
         //test
         // CREATE TABLE IF NOT EXISTS `t_user` (
@@ -98,7 +99,7 @@ class UserController extends BaseController {
         // (12, 'babc', '123123', 1);
         $this->_list(M('User', 't_', 'mysql://root:123123@localhost/test#utf8'));
 
-        $this->assign('_info', $this->_info);
+        $this->assign('_info', $_info);
         $this->display();
     }
 
@@ -106,25 +107,14 @@ class UserController extends BaseController {
         if(IS_POST){
 
         }else{
-            $this->display('edit');
+            $this->display();
         }
     }
 
     public function edit(){
         if(IS_POST){
-            //switch on
 
         }else{
-
-            $id = I('get.id', false, 'int');
-
-            $this->_info['data']['id'] = 1;
-            $this->_info['data']['uname'] = 'qwe';
-            $this->_info['data']['email'] = 'a@b.c';
-            $this->_info['data']['phone'] = '13612312312';
-            $this->_info['data']['status'] = 1;
-
-            $this->assign('_info', $this->_info);
             $this->display();
         }
     }

@@ -2,12 +2,6 @@
 namespace Home\Controller;
 use Think\Controller;
 class BaseController extends Controller {
-
-	/**
-	 * @var array 输出页面变量
-	 */
-	protected $_info = array('title' => 'xxx管理后台');
-
 	/**
 	 * 初始化
 	 */
