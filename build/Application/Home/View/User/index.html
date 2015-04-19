@@ -35,6 +35,14 @@
 						<i class="ace-icon fa fa-angle-double-right"></i>
 						Static &amp; Dynamic Tables
 					</small>
+					<div class="pull-right">
+						<a href="{:U('User/add')}" class="btn btn-success btn-sm" data-rel="tooltip" data-placement="bottom" title="添加">
+							<i class="ace-icon fa fa-plus"></i>
+						</a>
+						<a href="{:U('User/delete')}" class="btn btn-danger btn-sm" data-rel="tooltip" data-placement="bottom" title="批量删除">
+							<i class="ace-icon fa fa-trash"></i>
+						</a>
+					</div>
 				</h1>
 			</div><!-- /.page-header -->
 
@@ -76,21 +84,14 @@
 											<td><span class="label label-sm label-warning">{$vo.status}</span></td>
 											<td>
 												<div class="hidden-sm hidden-xs btn-group">
-													<button class="btn btn-xs btn-success">
-														<i class="ace-icon fa fa-check bigger-120"></i>
-													</button>
+													<a href="{:U('User/edit')}" class="btn btn-xs btn-info">
+														<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+													</a>
+													
 
-													<button class="btn btn-xs btn-info">
-														<i class="ace-icon fa fa-pencil bigger-120"></i>
-													</button>
-
-													<button class="btn btn-xs btn-danger">
+													<a href="{:U('User/delete')}" class="btn btn-xs btn-danger">
 														<i class="ace-icon fa fa-trash-o bigger-120"></i>
-													</button>
-
-													<button class="btn btn-xs btn-warning">
-														<i class="ace-icon fa fa-flag bigger-120"></i>
-													</button>
+													</a>
 												</div>
 
 												<div class="hidden-md hidden-lg">
@@ -101,23 +102,15 @@
 
 														<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
 															<li>
-																<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+																<a href="{:U('User/edit')}" class="tooltip-info" data-rel="tooltip" title="Edit">
 																	<span class="blue">
-																		<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																	</span>
-																</a>
-															</li>
-
-															<li>
-																<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																	<span class="green">
 																		<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
 																	</span>
 																</a>
 															</li>
 
 															<li>
-																<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+																<a href="javascript:void(0);" class="tooltip-error" data-rel="tooltip" title="Delete">
 																	<span class="red">
 																		<i class="ace-icon fa fa-trash-o bigger-120"></i>
 																	</span>
@@ -146,7 +139,7 @@
 
 <include file="Public/foot" />
 <script type="text/javascript">
-	jQuery(function($) {
+jQuery(function($) {
 
 		//And for the first simple table, which doesn't have TableTools or dataTables
 		//select/deselect all rows according to table header checkbox
